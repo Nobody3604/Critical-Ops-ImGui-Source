@@ -1,0 +1,187 @@
+Critical Ops Offset 1.41.0
+*****| EvilBunny420 |*****
+
+Enum Input
+Jump = 4
+Crouch = 5
+Shoot_1 = 7
+
+
+Enum WeaponCategory
+Pistol = 0
+Assault Rifle = 1
+SubmachineGun = 2
+Shotgun = 3
+SniperRifle = 4
+Melee = 5
+Grenade = 6
+Utility = 7
+
+Enum ArmorPenetration
+Low = 0
+Medium = 1
+High = 2
+VeryHigh = 3
+IgnoreArmor = 4
+
+Enum AimType
+None = 0
+Overlay = 1
+ViewSpace = 2
+
+Enum Character.GetSpottedStatusResult
+NotSpotted = 78
+Spotted = 6
+
+Enum TutorialManager.StageCompletionResult
+NotCompleted = 45
+Completed = 11
+
+Enum Team
+None = 0
+T = 1
+CT = 2
+Spectator = 3
+
+Enum RankEnabled
+Ok = 0
+NotEnoughKills = 1
+Banned = 2
+AFKPenalty = 3
+NotLoggedIn = 4
+Unknown = 5
+
+Enum CameraState
+First_Person = 0
+Third_Person = 1
+Free Look = 2
+Death_Camera = 3
+Cinematic = 4
+
+
+PracticeModeBot
+GetButton(Input input) //0x16848E4
+
+InputReceiver
+GetButton(Input input) // 0x17ADD60
+
+CharacterData
+m_aimPunchY // 0x58
+m_aimPunchX // 0x5C
+m_characterSettings // 0x78
+m_wpn // 0x80
+AimpunchRecover(float dt) // 0x144cc38
+UpdateSpread // 0x144bb80
+
+
+CapsuleCollider
+get_Radius // 0x285C9F0
+get_Height // 0x285CA40
+
+LocalCharacter.<Dryfire>d__163
+MaxDryfiringTime // 0x30
+interval // 0x40
+MoveNext // 0x15bded4
+
+
+CameraSettings
+m_profile // 0x20
+get_FovWorld // 0x186f2ac
+get_FovViewModel // 0x186f264
+
+CameraSystem
+ChangeState(CameraState newState, bool targetState, character followcharacter) // 0x16f4180
+setHorizontalFieldOfView(float horizontalFov) // 0x16f5488
+
+Character
+<data>K__backingField // 0xD8
+Gameplay_Update(float deltaTime) // 0x1583b10
+GetSpottedStatus +  0x2C // 0x1583BB8
+
+
+GameSystem
+UpdateCharacterHitBuffer + 0x2A0 // 0x1488788
+UpdateCharacterHitBuffer + 0x2EC // 0x14887D4
+UpdateWallHit // 0x148d61c
+RaycastCharacters + 0x3C8 // 0x1490E3C
+
+ImplementerWeaponGameplayBase
+get_Crosshair // 0x1618b7c
+
+GrenadeInstance
+ExplodeGrenade // 0x16be8dc
+
+HudIndicatorRenderer
+DrawCharacterIndicators + 0x25C //  0x152FEA0
+IsCharacterVisible // 0x153158c 
+IsAimingAtEnemy // 0x1531714
+
+IndicatorRenderer
+IsInScreenSpaceRange(in Vector3 origin, in Vector3 target, float distanceThreshold, float minDistance) // 0x1764690
+
+
+OverlayScope
+set_Spread(float value) // 0x13ebc0c
+
+OverlayFlashBang
+m_FlashTime // 0x38
+Render(Irenderer renderer) // 0x15fa4c8
+
+TutorialManager
+get_isFirstMatchStageCompleted // 0x179B1D0
+get_isGameplayStageCompleted // 0x179BB14
+get_isProfileStageStageCompleted // 0x179AFB8
+get_isPracticeStageCompleted // 0x179AB78
+get_isMenuStageCompleted // 0x179B3E8
+
+WeaponViewModel
+m_dualWield // 0xA8
+Awake // 0x18bff34
+
+CharacterViewFirstPerson
+m_fireLeft // 0xF5
+Gameplay_Update(float deltaTime) // 0x1739be0
+
+
+AimAssist
+ApplyFriction( float aimAssistAmount, ref Vector2 turn, in AimAssistConfig aimAssistConfig) // 0x160e020
+CalculateAimAssist(LocalCharacter localCharacter, float aimAssistAmount, Vector2 turn, in AimAssistConfig  aimAssistConfig) // 0x160e480
+
+Party
+UpdateEnabledState(int userID, RankEnabled value) // 0x139AAFC
+
+CharacterSettingsData
+RunSpeed // 0x14
+WalkSpeed // 0x18
+CrouchWalkSpeed // 0x1C
+AirSpeed // 0x20
+CameraHeight // 0x44
+JumpForce // 0x4C
+JumpForceCrouched // 0x50
+UphillSlowdownFactor // 0x5C
+damageSlowdownFactor // 0x60
+fallingSlowdownFactor // 0x64
+
+WeaponDefData
+ID // 0x18
+WeaponCategory // 0x38
+MaxDamage // 0x4C
+MinDamage // 0x50
+Range // 0x60
+Firerate // 0x64
+Burst // 0x68
+ArmorPenetration // 0x80
+ReloadTime // 0x84
+DeployTime // 0x88
+PrepareTime // 0x8C
+ConsumesAmmo // 0x94
+AimType // 0x98
+RecoilYFactor // 0xf0
+RecoilXFactor // 0x100
+RecoilRecover // 0x108
+BurstFireShots // 0x11C
+BurstFireCoolDown // 0x120
+
+CameraProfile
+FovWorld // 0x10
+FovViewModel // 0x14
